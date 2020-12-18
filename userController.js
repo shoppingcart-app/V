@@ -8,6 +8,9 @@ var router=express.Router();
 router.use(bodyParser.urlencoded({extended:true}));
 router.use(bodyParser.json());
 
+/**
+ *  user registartion
+ */
 router.post('/reg', (req,res)=>{
     const {firstName,lastName,userName,password,phnNo,address,state,city,pincode}=req.body;
     const newUser=userReg({firstName:firstName,lastName:lastName,userName:userName,password:bcrypt.hashSync(password, 8),phnNo:phnNo,address:address,state:state,city:city,pincode:pincode});
