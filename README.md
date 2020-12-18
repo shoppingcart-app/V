@@ -1,1 +1,1 @@
-# V
+# shopping cart application
